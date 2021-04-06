@@ -4,6 +4,12 @@ Aurora is a flutter package to create [aurora](https://youtu.be/Y3VJTnmJEgM) gra
 
 <img src="./media/example.png" width="200" />
 
+## Install
+```yaml
+dependencies:
+  aurora: ^0.0.1
+```
+
 ## Usage
 ```dart
 import 'package:aurora/aurora.dart';
