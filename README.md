@@ -2,15 +2,17 @@
 
 Aurora is a flutter package to create [aurora](https://youtu.be/Y3VJTnmJEgM) gradient shades in your mobile app .
 
-<img src="./media/example.png" width="200" />
+<img src="https://raw.githubusercontent.com/pacifio/aurora/master/media/example.png" width="200" />
 
 ## Install
+
 ```yaml
 dependencies:
-  aurora: ^0.0.1
+  aurora: ^1.0.0
 ```
 
 ## Usage
+
 ```dart
 import 'package:aurora/aurora.dart';
 
@@ -66,6 +68,10 @@ class HomeScreen extends StatelessWidget {
                 left: -100,
                 child: Aurora(
                   size: 300,
+                  colors: [
+                    Color(0xffc2e59c).withOpacity(1),
+                    Color(0xff64b3f4).withOpacity(1)
+                  ],
                 )),
             Positioned(
                 top: -50,

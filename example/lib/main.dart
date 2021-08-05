@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +40,10 @@ class HomeScreen extends StatelessWidget {
                 left: -100,
                 child: Aurora(
                   size: 300,
+                  colors: [
+                    Color(0xffc2e59c).withOpacity(1),
+                    Color(0xff64b3f4).withOpacity(1)
+                  ],
                 )),
             Positioned(
                 top: -50,
@@ -74,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "Gradients",
-                    style: style.copyWith(fontSize: style.fontSize + 8),
+                    style: style.copyWith(fontSize: style.fontSize! + 8),
                   ),
                 ],
               ),

@@ -7,7 +7,8 @@ class Aurora extends StatelessWidget {
   final double size;
   final List<Color> colors;
   final double blur;
-  const Aurora({Key key, this.size = 300, this.colors, this.blur = 200})
+  const Aurora(
+      {Key? key, this.size = 300, required this.colors, this.blur = 200})
       : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class _CustomBlobShape extends CustomPainter {
   final double blur;
   final List<Color> gradientColors;
 
-  _CustomBlobShape({this.gradientColors, this.blur});
+  _CustomBlobShape({required this.gradientColors, required this.blur});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -123,11 +124,7 @@ class _CustomBlobShape extends CustomPainter {
     paint.shader = ui.Gradient.linear(
         Offset(size.width * 0.09698131, size.height * 0.1487400),
         Offset(size.width * 0.09698131, size.height * 1.003337),
-        gradientColors ??
-            [
-              Color(0xffc2e59c).withOpacity(1),
-              Color(0xff64b3f4).withOpacity(1)
-            ],
+        gradientColors,
         [0, 1]);
     paint.maskFilter = MaskFilter.blur(BlurStyle.normal, blur);
     canvas.drawPath(path_0, paint);
